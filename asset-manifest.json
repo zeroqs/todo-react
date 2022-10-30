@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zeroqs/todo-react/static/css/main.4cbde5c2.css",
+    "main.js": "/zeroqs/todo-react/static/js/main.31a9937a.js",
+    "index.html": "/zeroqs/todo-react/index.html",
+    "main.4cbde5c2.css.map": "/zeroqs/todo-react/static/css/main.4cbde5c2.css.map",
+    "main.31a9937a.js.map": "/zeroqs/todo-react/static/js/main.31a9937a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cbde5c2.css",
+    "static/js/main.31a9937a.js"
+  ]
+}
