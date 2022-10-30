@@ -1,8 +1,7 @@
 import React from 'react';
 import MainTodo from "./components/MainTodo/MainTodo";
 import TodoList from "./components/TodoList/TodoList";
-
-const DEFAULT_TODOS = [
+export const DEFAULT_TODOS = [
     {
         todo: '',
         isCompleted: false,
@@ -27,7 +26,7 @@ function App() {
         setTodos(
             todos.map((todo) => {
                 if (todo.id === id) {
-                    return {...todo, isCompleted: true}
+                    return {...todo, isCompleted: !todo.isCompleted}
                 }
                 return todo
             })

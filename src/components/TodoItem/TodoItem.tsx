@@ -3,7 +3,7 @@ import {Todo} from "../../App";
 import {DONE_TODO, PROGRESS_TODO} from "../../constants/styleConstants";
 import Button from "../Button/Button";
 
-interface TodoItemProps {
+export interface TodoItemProps {
     id? : number,
     isCompleted : boolean,
     todo: string,
@@ -12,7 +12,7 @@ interface TodoItemProps {
 
 const TodoItem:FC<TodoItemProps> = ({id,isCompleted,todo,switchTodo}) => {
     return (
-        <tr className="bg-gray-800">
+        todo ? <tr className="bg-gray-800">
             <td className="p-3 font-bold max-w-xs">
                 <span>{todo}</span>
             </td>
@@ -22,9 +22,9 @@ const TodoItem:FC<TodoItemProps> = ({id,isCompleted,todo,switchTodo}) => {
                 }
             </td>
             <td className="p-3 flex flex-col">
-                <Button onClick={() => {switchTodo(id)}} types={"done"}/>
+                <Button onClick={() => {switchTodo(id)}} types={isCompleted ? "progress" : "done"}/>
             </td>
-        </tr>
+        </tr> : null
     );
 };
 
